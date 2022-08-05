@@ -1,0 +1,567 @@
+definitions:
+  securitySchemes:
+    tokenauth:
+      type: basic
+      description: bearer auth
+      name: Authorization
+      in: header
+    demouser:
+      type: basic
+
+  connectWallet:
+    required:
+      - walletAddress
+    properties:
+      walletAddress:
+        type: string
+      userName:
+        type: string
+      email:
+        type: string
+
+  createNotification:
+    required:
+      - title
+    properties:
+      title:
+        type: string
+      description:
+        type: string
+      notificationType:
+        type: string
+      image:
+        type: string
+
+  register:
+    required:
+      - userName
+      - email
+      - password
+      - otp
+    properties:
+      userName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      referralCode:
+        type: string
+      otp:
+        type: integer
+
+  verifyOtp:
+    required:
+      - email
+      - otp
+    properties:
+      email:
+        type: string
+      otp:
+        type: integer
+
+  resendOtp:
+    required:
+      - email
+    properties:
+      email:
+        type: string
+
+  emailOtp:
+    required:
+      - email
+      - userName
+    properties:
+      email:
+        type: string
+      userName:
+        type: string
+
+  updateProfile:
+    properties:
+      userName:
+        type: string
+      name:
+        type: string
+      email:
+        type: string
+      profilePic:
+        type: string
+      coverPic:
+        type: string
+      massPageUrl:
+        type: string
+      bio:
+        type: string
+      facebook:
+        type: string
+      twitter:
+        type: string
+      youtube:
+        type: string
+      telegram:
+        type: string
+
+  forgotPassword:
+    required:
+      - email
+      - type
+    properties:
+      email:
+        type: string
+      type:
+        type: string
+        description: user/admin
+
+  resetPassword:
+    required:
+      - newPassword
+    properties:
+      newPassword:
+        type: string
+
+  addAdmin:
+    required:
+      - userName
+      - email
+      - password
+    properties:
+      userName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      permissions:
+        type: object
+        properties:
+          viewPassword:
+            type: boolean
+            default: false
+          viewAndBlockMessages:
+            type: boolean
+            default: false
+          addOrRemoveNewAdmin:
+            type: boolean
+            default: false
+          suspendBundles:
+            type: boolean
+            default: false
+
+  setPermissions:
+    required:
+      - _id
+    properties:
+      _id:
+        type: array
+        items:
+          type: string
+      permissions:
+        type: object
+        properties:
+          viewPassword:
+            type: boolean
+            default: false
+          viewAndBlockMessages:
+            type: boolean
+            default: false
+          addOrRemoveNewAdmin:
+            type: boolean
+            default: false
+          suspendBundles:
+            type: boolean
+            default: false
+
+  login:
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+
+  addStaticContent:
+    required:
+      - type
+      - title
+      - description
+    properties:
+      type:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+
+  editStaticContent:
+    required:
+      - _id
+      - title
+      - description
+    properties:
+      _id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+
+  addSubscription:
+    required:
+      - title
+      - description
+      - validTillDate
+      - masPrice
+      - fees
+    properties:
+      title:
+        type: string
+      description:
+        type: string
+      validTillDate:
+        type: string
+      masPrice:
+        type: integer
+      fees:
+        type: integer
+
+  editSubscription:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      validTillDate:
+        type: string
+      masPrice:
+        type: integer
+      fees:
+        type: integer
+
+  addBundle:
+    required:
+      - title
+      - donationAmount
+      - duration
+      - services
+      - image
+    properties:
+      title:
+        type: string
+      description:
+        type: string
+      donationAmount:
+        type: string
+      duration:
+        type: string
+      services:
+        type: string
+      image:
+        type: string
+
+  editBundle:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      donationAmount:
+        type: string
+      duration:
+        type: string
+      services:
+        type: string
+      image:
+        type: string
+
+  createCollection:
+    required:
+      - contractAddress
+    properties:
+      contractAddress:
+        type: string
+      name:
+        type: string
+      symbol:
+        type: string
+      baseURI:
+        type: string
+      image:
+        type: string
+      description:
+        type: string
+      categoryType:
+        type: string
+
+  editCollection:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+      symbol:
+        type: string
+      baseURI:
+        type: string
+      image:
+        type: string
+      description:
+        type: string
+      categoryType:
+        type: string
+
+  createBid:
+    required:
+      - orderId
+    properties:
+      orderId:
+        type: string
+      name:
+        type: string
+      bid:
+        type: string
+      date:
+        type: string
+      statues:
+        type: string
+
+  editBid:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+      bid:
+        type: string
+      date:
+        type: string
+      statues:
+        type: string
+
+  createModerator:
+    required:
+      - userName
+      - password
+      - ip
+      - walletAddress
+    properties:
+      userName:
+        type: string
+      password:
+        type: string
+      ip:
+        type: string
+      walletAddress:
+        type: string
+
+  editModerator:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      userName:
+        type: string
+      password:
+        type: string
+      ip:
+        type: string
+      walletAddress:
+        type: string
+
+  sendWarningMessage:
+    required:
+      - text
+      - userId
+      - chatId
+      - reportId
+    properties:
+      text:
+        type: string
+      userId:
+        type: string
+      chatId:
+        type: string
+      reportId:
+        type: string
+
+  choosePlan:
+    required:
+      - subscriptionId
+    properties:
+      subscriptionId:
+        type: string
+      planType:
+        type: string
+      planName:
+        type: string
+
+  editPlan:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      planType:
+        type: string
+      planName:
+        type: string
+
+  blockUser:
+    required:
+      - _id
+      - message
+      - time
+      - reportId
+    properties:
+      _id:
+        type: string
+      message:
+        type: string
+      time:
+        type: string
+      reportId:
+        type: string
+
+  editFee:
+    required:
+      - _id
+      - massHeld
+      - contentCreatorFee
+    properties:
+      _id:
+        type: string
+      massHeld:
+        type: string
+      contentCreatorFee:
+        type: string
+
+  exportNFT:
+    required:
+      - nftId
+      - walletAddress
+      - orderId
+    properties:
+      nftId:
+        type: string
+      walletAddress:
+        type: string
+      orderId:
+        type: string
+
+  addSubAdmin:
+    required:
+      - name
+      - email
+      - password
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      permissions:
+        type: object
+        properties:
+          dashboard:
+            type: boolean
+          userManagement:
+            type: boolean
+          subAdminManagement:
+            type: boolean
+          settingsManagement:
+            type: boolean
+          bannerManagement:
+            type: boolean
+          referralManagement:
+            type: boolean
+          staticManagement:
+            type: boolean
+
+  editSubAdmin:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      permissions:
+        type: object
+        properties:
+          dashboard:
+            type: boolean
+          userManagement:
+            type: boolean
+          subAdminManagement:
+            type: boolean
+          settingsManagement:
+            type: boolean
+          bannerManagement:
+            type: boolean
+          referralManagement:
+            type: boolean
+          staticManagement:
+            type: boolean
+
+  blockUnblockSubAdmin:
+    required:
+      - _id
+      - status
+    properties:
+      _id:
+        type: string
+      status:
+        type: string
+
+  updateReferralSetting:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      referralAmount:
+        type: integer
+      refereeAmount:
+        type: integer
+
+  editContent:
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      contentFile:
+        type: string
+      contents:
+        type: array
+        items:
+          type: object
+          properties:
+            heading:
+              type: string
+            contentDescription:
+              type: string

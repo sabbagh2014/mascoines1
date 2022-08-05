@@ -1,0 +1,165 @@
+@media (max-width: 1640px) {
+  .tokenList li {
+    width: 101px;
+  }
+}
+@media (max-width: 1440px) {
+  .tokenList li {
+    width: 85px;
+  }
+}
+@media (max-width: 1366px) {
+  .tokenList li {
+    width: 80px;
+  }
+  .leftimg div {
+    height: 250px;
+    width: 250px;
+  }
+  .leftimg .span1 {
+    bottom: -80px;
+  }
+  .leftimg .span3 {
+    bottom: -13%;
+    left: -70px;
+  }
+  .leftimg .span2 {
+    left: -28%;
+    bottom: 20px;
+  }
+  .rightimg .span1 {
+    bottom: -100px;
+  }
+}
+@media (max-width: 1280px) {
+  .tokenList li {
+    width: 75px;
+  }
+  .leftUser {
+    width: 26%;
+  }
+  .rightUser {
+    width: 74%;
+  }
+}
+@media (max-width: 1024px) {
+  .leftUser {
+    width: 30%;
+    height: 77vh;
+  }
+  .rightUser {
+    width: 69%;
+  }
+  .tokenList li {
+    width: 75px;
+    margin-bottom: 5px;
+  }
+  .chatuser2 {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .leftimg {
+    display: none;
+  }
+  .rightimg {
+    display: none;
+  }
+}
+@media (min-width: 991px) {
+  .order1 {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .order2 {
+    order: 1;
+    align-items: center;
+    width: 100%;
+  }
+  .order3 {
+    order: 3;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (max-width: 1025px) {
+  .chatuser2 .div {
+    height: 15px !important;
+    width: 15px !important;
+    top: 13px !important;
+    right: 2px !important;
+  }
+}
+@media (max-width: 991px) {
+  .footer-chat input.form-control {
+    width: 51% !important;
+  }
+  .leftUser {
+    height: 81vh;
+  }
+}
+@media (max-width: 767px) {
+  figure.chatuser.chatuser2.chatuser4 {
+    margin: 0 auto !important;
+  }
+  figure.chatuser.chatuser2.chatuser4 div {
+    right: 0 !important;
+    top: 0 !important;
+  }
+  figure.chatuser.chatuser3 {
+    margin: 0;
+    margin-right: 10px;
+  }
+  .reposr-btn button {
+    width: 100%;
+  }
+  .chatuser2 {
+    height: 80px !important;
+    width: 80px !important;
+    margin-top: -50px !important;
+  }
+  .TabButtonsBox button {
+    font-size: 8px;
+  }
+  figure.chatuser.chatuser5 {
+    margin: 0;
+  }
+  .slick-next {
+    right: -40px;
+  }
+  figure.chatuser {
+    margin: auto;
+    margin-right: 10px;
+  }
+  .footer_btn {
+    padding: 2px 20px;
+  }
+  .chatmain {
+    display: block;
+  }
+  .leftUser {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .rightUser {
+    width: 100%;
+  }
+  .footer-chat input.form-control {
+    width: 35% !important;
+  }
+  .box-select div {
+    width: 45%;
+  }
+  .tokenList li {
+    width: 67px;
+  }
+  .imgWidth {
+    max-width: 100%;
+  }
+  .userList li h6 {
+    margin-left: 10px;
+  }
+}

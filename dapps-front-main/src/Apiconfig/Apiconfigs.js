@@ -1,5 +1,5 @@
-export let baseURL = "https://node.masplatform.net";
-export let socketURL = "wss://node.masplatform.net";
+export let baseURL = "https://node.masplatform.org";
+export let socketURL = "wss://node.masplatform.org";
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
  baseURL = "http://localhost:1865";

@@ -1,4 +1,4 @@
-let url = "https://node.masplatform.net/api/v1";
+let url = "https://node.masplatform.org/api/v1";
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   url = "https://localhost:1865/api/v1";

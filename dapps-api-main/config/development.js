@@ -1,7 +1,7 @@
 require("dotenv").config();
 module.exports = {
   port: 1865,
-  hostAddress: "http://admin.masplatform.net/reset-password",
+  hostAddress: "http://admin.masplatform.org/reset-password",
   databaseHost: "localhost",
   databasePort: "27017",
   databaseName: "dapps-data",

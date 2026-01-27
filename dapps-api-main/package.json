@@ -25,7 +25,7 @@
     "convert-excel-to-json": "^1.7.0",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
-    "csvtojson": "^2.0.10",
+    "csvtojson": "^2.0.13",
     "doasync": "^2.0.1",
     "dotenv": "^16.0.1",
     "ethereumjs-common": "^1.5.2",

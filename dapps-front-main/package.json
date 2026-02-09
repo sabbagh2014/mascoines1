@@ -24,7 +24,7 @@
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "apexcharts": "^3.23.1",
-    "axios": "^0.21.1",
+    "axios": "^1.13.5",
     "clsx": "^1.1.1",
     "emoji-picker-react": "^3.4.8",
     "ethers": "^5.4.6",
